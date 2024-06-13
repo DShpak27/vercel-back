@@ -11,6 +11,7 @@ router.get('/', (_, res) => {
 
 router.get('/set-cookie', (_, res) => {
   res.cookie('testcookie', 'cookie-body', {
+    // maxAge: 1000 * 60 * 60 * 24, // Кука живе 24 години
     httpOnly: true, // Захищає куку від доступу через JavaScript
     secure: true, // Дозволяє передачу куки лише через HTTPS
     sameSite: 'None', // Дозволяє передачу куки в межсайтовому контексті
