@@ -31,6 +31,6 @@ app.use(cors());
 app.use(cookieParser());
 app.use('/', router);
 
-app.listen(80, () => {
-  console.log('Server running on port 80');
+app.listen(443, () => {
+  console.log('Server running on port 443');
 });
