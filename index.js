@@ -28,7 +28,7 @@ router.get('/get-cookie', (req, res) => {
 });
 
 app.use(
-  cors({ origin: 'https://vercel-front-drab.vercel.app/', credentials: true })
+  cors({ origin: 'https://vercel-front-drab.vercel.app', credentials: true })
 );
 app.use(express.json());
 app.use(cookieParser());
