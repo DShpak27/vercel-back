@@ -1,6 +1,6 @@
-import express from 'express';
-import cookieParser from 'cookie-parser';
-import cors from 'cors';
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const app = express();
 const router = express.Router();
@@ -28,9 +28,10 @@ router.get('/get-cookie', (req, res) => {
 });
 
 app.use(cors());
+app.use(express.json());
 app.use(cookieParser());
 app.use('/', router);
 
-app.listen(443, () => {
-  console.log('Server running on port 443');
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
 });
