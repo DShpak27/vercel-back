@@ -5,6 +5,10 @@ import cors from 'cors';
 const app = express();
 const router = express.Router();
 
+router.get('/', (_, res) => {
+  res.send('Hello World!');
+});
+
 router.get('/set-cookie', (_, res) => {
   res.cookie('testcookie', 'cookie-body', {
     httpOnly: true, // Захищає куку від доступу через JavaScript
