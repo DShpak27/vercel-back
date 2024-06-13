@@ -9,6 +9,7 @@ router.get('/', (_, res) => {
   res.send('Hello World!');
 });
 
+// Встановлення куки
 router.get('/set-cookie', (_, res) => {
   res.cookie('testcookie', 'cookie-body', {
     httpOnly: true, // Захищає куку від доступу через JavaScript
